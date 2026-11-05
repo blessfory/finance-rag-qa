@@ -1,0 +1,39 @@
+### RAG 智能问答
+POST http://localhost:8000/api/v1/ask
+Content-Type: application/json
+
+{
+    "question": "兴业银行2024年营收和净利润分别是多少？",
+    "enable_rerank": true,
+    "top_k": 10,
+    "rerank_top": 3
+}
+
+###
+
+### 仅检索评估（不需要LLM，速度快）
+POST http://localhost:8000/api/v1/evaluate
+Content-Type: application/json
+
+{
+    "top_k": 5,
+    "enable_generation_eval": false
+}
+
+###
+
+### 完整评估（检索+生成，需要LLM）
+POST http://localhost:8000/api/v1/evaluate
+Content-Type: application/json
+
+{
+    "top_k": 5,
+    "enable_generation_eval": true
+}
+
+###
+
+### 健康检查
+GET http://localhost:8000/health
+
+###

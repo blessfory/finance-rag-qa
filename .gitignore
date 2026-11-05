@@ -1,0 +1,31 @@
+# 模型权重（约 5GB，请按 README 从 HuggingFace 自行下载到 models/）
+models/
+
+# 大体积语料（年报 PDF 约 60MB）
+data/finance/annual_reports/
+
+# 运行时产物
+logs/
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 密钥
+.env
+config.local.ini
+
+# IDE / 工具
+.idea/
+.vscode/
+.claude/
+
+# 个人文档（仅本地保留，不入库）
+简历_*.md
+个人规划.md
+docs/面试准备文档.md
+docs/项目
+
+# 日志文件
+*.logs
